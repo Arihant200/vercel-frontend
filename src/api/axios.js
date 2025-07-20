@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost:3000", // or your server IP
+  baseURL: "https://vercel-backend-1-fmta.onrender.com/0", // or your server IP
 });
 
 instance.interceptors.request.use((config) => {

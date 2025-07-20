@@ -13,11 +13,16 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("in submit")
     try {
+         console.log("before request")
       const response = await API.post('/auth/login', form);
+       console.log("after request")
       const { access_token, user } = response.data;
+       console.log(access_token,user);
       localStorage.setItem("user", JSON.stringify({
   username: user.username,
+ 
   id: user.id,
   token: access_token
 }));
