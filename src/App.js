@@ -8,7 +8,9 @@ import Chat from './pages/Chat';
 import PrivateRoute from './components/PrivateRoute';
 import EditProfile from './pages/EditProfile';
 function App() {
-    const token = localStorage.getItem('token');
+    const user = JSON.parse(localStorage.getItem('user'));
+const token = user?.token;
+
   return (
    
       <Routes>

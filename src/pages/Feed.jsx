@@ -7,6 +7,9 @@ const Feed = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
+  console.log("In Feed Page");
+}, []);
+  useEffect(() => {
     const fetchPosts = async () => {
       try {
         const res = await axios.get('/posts');

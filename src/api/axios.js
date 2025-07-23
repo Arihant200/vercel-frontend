@@ -1,8 +1,9 @@
 // src/api/axios.js
 import axios from "axios";
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
 const instance = axios.create({
-  baseURL: "https://vercel-backend-1-fmta.onrender.com/", // or your server IP
+  baseURL: backendUrl, // or your server IP
 });
 
 instance.interceptors.request.use((config) => {

@@ -26,7 +26,8 @@ const Login = () => {
   id: user.id,
   token: access_token
 }));
-      navigate('/feed');
+      console.log("navigating to /feed...");
+      setTimeout(() => navigate('/feed'), 0);
       console.log("done till now")
     } catch (err) {
       alert(err.response.data.message || 'Login failed');
